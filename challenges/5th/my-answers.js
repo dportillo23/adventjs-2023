@@ -18,3 +18,24 @@ function cyberReindeer(road, time) {
     }
     return roadStates;
 }
+/** @score 260 */
+function cyberReindeer2(road, time) {
+    const roadStates = [road];
+    let currentRoad = road;
+    let sPosition = 0;
+    const roadLength = road.length;
+    for (let t = 1; t < time; t++) {
+        if (t === 5) {
+            road = road.replaceAll('|', '*');
+        }
+        const nextPosition = sPosition + 1;
+        if (road[nextPosition] !== '|') {
+            const before = '.' + road.substring(1, nextPosition);
+            const after = road.substring(nextPosition + 1, roadLength);
+            currentRoad = `${before}S${after}`;
+            sPosition = nextPosition;
+        }
+        roadStates.push(currentRoad);
+    }
+    return roadStates;
+}
