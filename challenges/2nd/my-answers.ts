@@ -10,8 +10,14 @@ function manufacture(gifts: string[], materials: string) {
 }
 
 /** @score 270 */
-function manufacture2nd(gifts: string[], materials: string) {
+function manufacture2(gifts: string[], materials: string) {
   return gifts.filter(gift => {
     return [...gift].every(c => materials.indexOf(c) !== -1)
   })
+}
+
+/** @score 280 */
+function manufacture3(gifts: string[], materials: string) {
+  const regex = new RegExp("^[" + materials + "]+$") // Didn't accepted template strings
+  return gifts.filter(gift => regex.test(gift))
 }
