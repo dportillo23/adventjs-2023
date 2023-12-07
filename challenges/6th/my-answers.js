@@ -47,5 +47,5 @@ function maxDistance3(movements) {
 function maxDistance4(movements) {
     const left = movements.match(/</g)?.length ?? 0;
     const right = movements.match(/>/g)?.length ?? 0;
-    return movements.length - 2 * Math.min(right, left);
+    return Math.abs(right - left) + movements.length - (right + left);
 }
