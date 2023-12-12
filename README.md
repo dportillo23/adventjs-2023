@@ -1,6 +1,6 @@
 # AdventJS 2023
 
-Coding solutions for `adventJS 2023` made by [Midudev](https://github.com/midudev)
+Coding solutions for <a href="https://adventjs.dev/" style="color: #faca15; font-weight: bold">adventJS 2023</a> made by [Midudev](https://github.com/midudev)
 
 I'll make a second github account where I'll add solutions made by ChatGPT and compare them with my own (after a while because I try to improve my answers)
 
